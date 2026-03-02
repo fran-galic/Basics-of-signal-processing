@@ -20,6 +20,10 @@ dependencies = [
     { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "numpy", version = "2.3.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "pyfftw", version = "0.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+    { name = "pyfftw", version = "0.14.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
+    { name = "pyfftw", version = "0.15.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "pyfftw", version = "0.15.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "scipy", version = "1.10.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
     { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
@@ -30,6 +34,7 @@ dependencies = [
 requires-dist = [
     { name = "matplotlib", specifier = ">=3.7.5" },
     { name = "numpy", specifier = ">=1.24.4" },
+    { name = "pyfftw", specifier = ">=0.13.1" },
     { name = "scipy", specifier = ">=1.10.1" },
 ]
 
@@ -1508,6 +1513,171 @@ wheels = [
 ]
 
 [[package]]
+name = "pyfftw"
+version = "0.13.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version < '3.9'",
+]
+dependencies = [
+    { name = "numpy", version = "1.24.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9f/bc/7376df0393e816b60bdc627fc8f653706f4caa95bcf79d07302a672f893e/pyFFTW-0.13.1.tar.gz", hash = "sha256:09155e90a0c6d0c1f2d1f3668180a7de95fb9f83fef5137a112fb05978e87320", size = 114359, upload-time = "2023-01-09T13:59:16.254Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0e/5f/3b1e6a721690e1950fa3fedfd2ba3beefbbaebfa35892e449fdc91f19fa7/pyFFTW-0.13.1-cp310-cp310-macosx_10_13_x86_64.whl", hash = "sha256:bed25dbb4b10454b564db951bfad976a382bc8d6af38d7f0995b239f17f58a0c", size = 2915435, upload-time = "2023-01-09T13:58:39.027Z" },
+    { url = "https://files.pythonhosted.org/packages/53/78/166c827f8320da6bca57c688ce8d875f43d545bd1f571312bb0efdc5f4a9/pyFFTW-0.13.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:48a571116ab78c44cbd86fb46c5df021b1199e4ea9c0c607d14a7c7c5b6bab3a", size = 2374061, upload-time = "2023-01-09T13:58:40.628Z" },
+    { url = "https://files.pythonhosted.org/packages/2d/0b/892b876ce00b4aa592d820867970de8e761eb71637ba74b5049f7f9fd46d/pyFFTW-0.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8f46337a3fb8270ef1237db25097c21905f5d2b045f49afea217b603a320c329", size = 2356577, upload-time = "2023-01-09T13:58:41.938Z" },
+    { url = "https://files.pythonhosted.org/packages/67/8c/e204347c48d7fbd6784bbf005a316673ef5f2e8ca2208e0fb2a8f13b4385/pyFFTW-0.13.1-cp310-cp310-win32.whl", hash = "sha256:c2208655e0b24b2afe4bafd05eeca5fee8e8a56fa045e296f782b1f61e088dfb", size = 2172184, upload-time = "2023-01-09T13:58:43.216Z" },
+    { url = "https://files.pythonhosted.org/packages/1d/ff/0db6263b0203e1f71ba517cc18c049b069753478730bc1b3ea967477daec/pyFFTW-0.13.1-cp310-cp310-win_amd64.whl", hash = "sha256:60a09f9e80544b82d18682f7301942613fcb34f0daf316f2833bcea13d76fc0c", size = 2578228, upload-time = "2023-01-09T13:58:45.109Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/fb/e1867c2c10c5472957d79bcf1cc193e2b92d5ce3db7d8b1c9a5be3c1d4a0/pyFFTW-0.13.1-cp311-cp311-macosx_10_13_x86_64.whl", hash = "sha256:dee09034f5d0464b828a8fd37da46776fc740e31870dd9e5d36d15c34f72102c", size = 2913561, upload-time = "2023-01-09T13:58:46.662Z" },
+    { url = "https://files.pythonhosted.org/packages/52/95/98a4647235761e9430e9a8f83f1b8d6681413d925f100f1b40edea2761be/pyFFTW-0.13.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5b5ee9b582befebcdb29a8d73e03e70c96ecd53625c9c72eb753a967cf2979b4", size = 2397875, upload-time = "2023-01-09T13:58:47.891Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/35/f7c831976409ad47165ff72e511afe69af981f566ba903952c9e4e15b049/pyFFTW-0.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8bfce5e4190b07af8dfca4bfeef7481ea61148744bd92d4df944357ee3939a83", size = 2376433, upload-time = "2023-01-09T13:58:49.419Z" },
+    { url = "https://files.pythonhosted.org/packages/41/96/6b9bf2e831cf4a95b662097d521ea5c6734d5ac7665a80dcb74c5ce7cc46/pyFFTW-0.13.1-cp311-cp311-win32.whl", hash = "sha256:51675f9bc7536a3ac9893d8277a3af000ce4207ad978db219bdc715662ce1bcb", size = 2171916, upload-time = "2023-01-09T13:58:50.898Z" },
+    { url = "https://files.pythonhosted.org/packages/59/96/3b18e02e000b4876ff0c221440545b36a7a13b8631b23e386ac8625c84d5/pyFFTW-0.13.1-cp311-cp311-win_amd64.whl", hash = "sha256:11c280b8062a201cc6aab6641b7a4f4d45d8e5f5f2d9ba2c1514c9510e0c5f32", size = 2577590, upload-time = "2023-01-09T13:58:52.446Z" },
+    { url = "https://files.pythonhosted.org/packages/a8/90/692537feb638e65246f87a929bdfce8a6983add51663e1d41ae97d990c0a/pyFFTW-0.13.1-cp38-cp38-macosx_10_13_x86_64.whl", hash = "sha256:04bbc06da1e46cfec05ace62591aa00cadfe550d920137022cd210b1806e03e4", size = 2910907, upload-time = "2023-01-09T13:58:54.039Z" },
+    { url = "https://files.pythonhosted.org/packages/c0/af/3950e248b99411b0715fb346f380d2f09b652b3b6205c25087f0b8a025e2/pyFFTW-0.13.1-cp38-cp38-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:1a8f0e4207e24ec38a50bb6442614d4bbf135af2ba23db6546759f54a36c11e0", size = 1554124, upload-time = "2023-01-09T13:58:55.553Z" },
+    { url = "https://files.pythonhosted.org/packages/4c/bb/22ce52cebdee975034b905fb79086d4c857e7ef733011ae09b9d04d03d11/pyFFTW-0.13.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:2998f3633a430567986bf47ec3774ed50356faded66264f766d76efd117df1b3", size = 1822015, upload-time = "2023-01-09T13:58:57.062Z" },
+    { url = "https://files.pythonhosted.org/packages/3c/48/28b10c8daa2f5f5a48e8bd08ec667d08351222a30999e65d3daf8fc293a8/pyFFTW-0.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6c948799bfee686cb17417c06c8d3bb7fb1b867196bc4939963b18a1108c62ab", size = 2395816, upload-time = "2023-01-09T13:58:58.504Z" },
+    { url = "https://files.pythonhosted.org/packages/18/46/76db0218562236629d7edeb8915e01dffb0888b217d7859f0c705f9600b0/pyFFTW-0.13.1-cp38-cp38-win32.whl", hash = "sha256:4a03adbcfbd52038dd6e5ad2a9697cba881c80d40a625d942e5a6066a1f83884", size = 2175014, upload-time = "2023-01-09T13:58:59.995Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/37/11a6955c427a1a5ab9cbad47f6f4b1349593742f526e97bf196c7e02e9be/pyFFTW-0.13.1-cp38-cp38-win_amd64.whl", hash = "sha256:8ddcdebc29c58a65eb43802462e7c21a8db7d70d2e4b8a79e43630c9149448f8", size = 2581522, upload-time = "2023-01-09T13:59:01.309Z" },
+    { url = "https://files.pythonhosted.org/packages/55/7f/8ae84358d2ca4ef8d8fe32a0eddb5f7b080669a28ded52fcfbb1c42f4051/pyFFTW-0.13.1-cp39-cp39-macosx_10_13_x86_64.whl", hash = "sha256:c05b7ddec15070c72704d0ad5e632222b0775327ab6890af288a2a36eb15043e", size = 2916349, upload-time = "2023-01-09T13:59:02.931Z" },
+    { url = "https://files.pythonhosted.org/packages/12/8f/53da83226722e0484a13815487f83c7df86d466645f04f06264e16216eb7/pyFFTW-0.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d872744959a4df7307b32fbeb288137ed242cf24034a791abb3ee901c8c1bf3e", size = 2393484, upload-time = "2023-01-09T13:59:04.237Z" },
+    { url = "https://files.pythonhosted.org/packages/ca/2f/de0a1023ea389330e37af8a16ba0f56dbd522dc94f1ab8a674ab9ef70fb5/pyFFTW-0.13.1-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9a67d3109fb2c549ee95c8dbbcf07020400672cbfb48f79c3f88b615a1c95598", size = 2309276, upload-time = "2023-01-09T13:59:05.942Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/dc/e30b7ceb66d9529df86db6a22e454c92740b177847240334a7ea2bc6929a/pyFFTW-0.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d799b442815f56b821b615ee3e8960ab9f3bc1e7a4bcbcf5813b847005875b47", size = 2370159, upload-time = "2023-01-09T13:59:07.179Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/f4/ac668d9a25973f37cee574c6d15134c80face0d8a560fa49051c0b772202/pyFFTW-0.13.1-cp39-cp39-win32.whl", hash = "sha256:18ac39489848a10785ddd998df242f58d5f75017c414297fee470bfdec202168", size = 2173082, upload-time = "2023-01-09T13:59:08.538Z" },
+    { url = "https://files.pythonhosted.org/packages/28/2b/8f130d75ab88224de919fcd08dcc02ca75102a0227850f00c27178a31c21/pyFFTW-0.13.1-cp39-cp39-win_amd64.whl", hash = "sha256:af58834b496b473419c4dcd47e01657d1d066e9c23198e1cb82eba82356c9097", size = 2579446, upload-time = "2023-01-09T13:59:10.18Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/be/74c0073e7b050b65641156bda0f7186c43d07a4c07babc9305437d1fcacf/pyFFTW-0.13.1-pp38-pypy38_pp73-macosx_10_13_x86_64.whl", hash = "sha256:415040bcadcad887bf112d2db0ff4b13e808d1aad7fddcd60acef20e0e11c84a", size = 2887862, upload-time = "2023-01-09T13:59:11.502Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/e3/80c4202461d0a0e44bc714b9a782620a8f9855cc514b3eab777807281609/pyFFTW-0.13.1-pp38-pypy38_pp73-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e68503033864f9650f480624a0830b10367ad446cb7b5bef33d0d1c596519446", size = 1407731, upload-time = "2023-01-09T13:59:13.062Z" },
+    { url = "https://files.pythonhosted.org/packages/64/1a/606f5b9d72e1fc3499a01cb7211a5971463aac7a8992c8bd9b347f4466bf/pyFFTW-0.13.1-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:7ccfa55d50a5464890a9486b835965e29f9df4e9d3e856cc51c9d2a34964e4a8", size = 2562662, upload-time = "2023-01-09T13:59:14.286Z" },
+]
+
+[[package]]
+name = "pyfftw"
+version = "0.14.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.9.*'",
+]
+dependencies = [
+    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.9.*'" },
+    { name = "setuptools", marker = "python_full_version == '3.9.*'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f2/c0/3ef1745022ffa8f5408a930f14809c0d9f122fc10dd492e8f816bed6fa40/pyfftw-0.14.0.tar.gz", hash = "sha256:a55f94d3da9b5c04de1bc96932a93f922910f3984557931356173a515277b65b", size = 162041, upload-time = "2024-07-22T10:45:20.052Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/60/f5b993e98977960b3c80675e97576fba9d32bacdf4706c861814ed7fa2a2/pyFFTW-0.14.0-cp310-cp310-macosx_12_0_x86_64.whl", hash = "sha256:0875da4116c5b85a9df9533d4d4b35c4f408c57b0103ad26fb5e5cc845b40923", size = 2828903, upload-time = "2024-07-22T10:44:24.149Z" },
+    { url = "https://files.pythonhosted.org/packages/1e/51/83fefd657660a7c0d3e3f902284114058b7ac3a43ce8ece9ad7975a09fc6/pyFFTW-0.14.0-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:d94cd827c8716f3c75b8f2947d2289fbd551e039f2bba970633357e9905ddbb7", size = 1268984, upload-time = "2024-07-22T10:44:26.219Z" },
+    { url = "https://files.pythonhosted.org/packages/71/2b/72986f078a3cf988a1c07cb9579008f4e2e102e018a37407376e8605e053/pyFFTW-0.14.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:ebecbbb38e2e13654782e344d9490e5bee9e9e83e45539192aa086f9600afce3", size = 2438277, upload-time = "2024-07-22T10:44:27.778Z" },
+    { url = "https://files.pythonhosted.org/packages/01/e2/25b26d45b21830fbcb4d5b1f02fb6fc5488c5d1e05eeaa969ecd2217d3db/pyFFTW-0.14.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:78e25340a9d36a78d657d5d758f658e8a29563760c19d25eb075399d03dad8ea", size = 3043218, upload-time = "2024-07-22T10:44:29.784Z" },
+    { url = "https://files.pythonhosted.org/packages/df/52/06a5a27a451e56248ecb73abe92e865324a47a8b31a87db7686ba5d04017/pyFFTW-0.14.0-cp310-cp310-win32.whl", hash = "sha256:7cd13afbc2e8afdcca5775de2e1d5a56175869899eff1a141aef8897144565f8", size = 2230725, upload-time = "2024-07-22T10:44:31.891Z" },
+    { url = "https://files.pythonhosted.org/packages/f6/70/785c82aa1a213a519ea10a4537edee0445dd667f43052c57c151227f943a/pyFFTW-0.14.0-cp310-cp310-win_amd64.whl", hash = "sha256:65aecb2e96316e405dc994affc7228b8ab3d387645257b741e69d48df51a975a", size = 2639239, upload-time = "2024-07-22T10:44:33.54Z" },
+    { url = "https://files.pythonhosted.org/packages/95/6a/986a58d778edbdc6e00afbeb2b38135f92cb9159c48772545b3c4af3f104/pyFFTW-0.14.0-cp311-cp311-macosx_12_0_x86_64.whl", hash = "sha256:72ca73b50a9015e4e5370b4fbab36e48db23129ba2728936fc4420d4cf94af60", size = 2829853, upload-time = "2024-07-22T10:44:35.345Z" },
+    { url = "https://files.pythonhosted.org/packages/41/b9/c79afc2e0451641d4bbf41a2a4a68906c363aa971d8a3a574b164ff59695/pyFFTW-0.14.0-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:9b4113a8810a3375adc30d9e94c257530efd715f633faffddab51723406a311f", size = 1269561, upload-time = "2024-07-22T10:44:37.962Z" },
+    { url = "https://files.pythonhosted.org/packages/93/df/b81587f117415a862df668151330d6dbb9d7beda0fbff6de0972395683d2/pyFFTW-0.14.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:e8eb372a3f8f6786239e6ee253c16898ff76be339be40d2192ec5802e02d59e5", size = 2497626, upload-time = "2024-07-22T10:44:39.712Z" },
+    { url = "https://files.pythonhosted.org/packages/61/1e/af6df0fdf609a3ce720e3e9551d41a0e6a41a2a0d5c2256c500d854449db/pyFFTW-0.14.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:ffbcdb49d4d961ff703b889208838ded0b47f3df36ff205358a737e525815962", size = 3100150, upload-time = "2024-07-22T10:44:42.154Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/5c/654f75df06147b7b1c43f6ae53fd706dc71992f2ff9f466f80c5418bc48f/pyFFTW-0.14.0-cp311-cp311-win32.whl", hash = "sha256:fa3425d216bc83e51d81526f232ad9027e9cbc7247b7017f44b59f5889ea50e8", size = 2230591, upload-time = "2024-07-22T10:44:44.075Z" },
+    { url = "https://files.pythonhosted.org/packages/32/1b/688524fa3ebd5e632a281138912bb16c90c8465cdb44f4d72307d4c7c77d/pyFFTW-0.14.0-cp311-cp311-win_amd64.whl", hash = "sha256:1ac9768f2a9fdbe18bbb63185c71d78097ee7df7f7e321b22c1faf540f7176e1", size = 2640072, upload-time = "2024-07-22T10:44:45.844Z" },
+    { url = "https://files.pythonhosted.org/packages/d5/5b/c14939b79746ec0004cf4fbdc184892451a3179c7620c08c93eef9edbaeb/pyFFTW-0.14.0-cp312-cp312-macosx_12_0_x86_64.whl", hash = "sha256:fd1eb00d286d5d6e852b472b661e99151bea1444c55c6a40fca9f9b97d437484", size = 2828408, upload-time = "2024-07-22T10:44:47.517Z" },
+    { url = "https://files.pythonhosted.org/packages/52/b4/bc6ecad31d35c8b4802a7867d1503876a467e7c0fb0bc4c6e6ca3f7985af/pyFFTW-0.14.0-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:533819b1145c92fa33b16ecdd7f234c3ea62d2cc0c1da35cd3beee4695286435", size = 1268241, upload-time = "2024-07-22T10:44:49.421Z" },
+    { url = "https://files.pythonhosted.org/packages/50/b4/364cc7dbca98a27c099f613c44efa4cb55ed862932d43b9a5e83dbe9d7b5/pyFFTW-0.14.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:69ca338d5c2e519c1ed9c5ecbafa8508d0c35fe38d0aa08ca665c4fb7206b28e", size = 2492545, upload-time = "2024-07-22T10:44:51.459Z" },
+    { url = "https://files.pythonhosted.org/packages/aa/a0/fbb1bdc313ea4d8781f6dcd509e6d83a03c6beb22f6c7b583b3a064e15fb/pyFFTW-0.14.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:2ca9aa7f76c9dd7f4813c8975359f2a655a4132b93f08176ff70376a3d7edc59", size = 3090305, upload-time = "2024-07-22T10:44:55.163Z" },
+    { url = "https://files.pythonhosted.org/packages/17/04/ffba84e90853612f113427ee4f1ae30bc5ec6da86ea5fcbd19ef5f8add60/pyFFTW-0.14.0-cp312-cp312-win32.whl", hash = "sha256:66d000b6bd7d6de5f1e53cc590481789293812ef9283493211fe677b7fd0aabf", size = 2227779, upload-time = "2024-07-22T10:44:56.865Z" },
+    { url = "https://files.pythonhosted.org/packages/38/d1/4f126dc8aa33cb27ed8666af21a1ee752799aaababd91b2f083ccfcaf43f/pyFFTW-0.14.0-cp312-cp312-win_amd64.whl", hash = "sha256:c961044f12282a7267db40b279cee86ace97e1d05a4bbec9e01a646ccdd400fb", size = 2638057, upload-time = "2024-07-22T10:44:58.525Z" },
+    { url = "https://files.pythonhosted.org/packages/a5/02/1dc1c37929722fe6200361b494d1ac51133bf1a1b05de6db9ad1b7729540/pyFFTW-0.14.0-cp39-cp39-macosx_12_0_x86_64.whl", hash = "sha256:c3be6188ba0441d963333df7db29e661b324d870156d8f81efe9003ad447ed9b", size = 2829353, upload-time = "2024-07-22T10:45:00.153Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/64/99881e4a14a7f1258a73881710dbc1073761cba08021d12657e6028efd6b/pyFFTW-0.14.0-cp39-cp39-macosx_14_0_arm64.whl", hash = "sha256:72aa2bf213e68e69755dcd3ef76cb05ac9fc82960c51fff902af8f01240564a4", size = 1269486, upload-time = "2024-07-22T10:45:02.258Z" },
+    { url = "https://files.pythonhosted.org/packages/9e/16/e789fb181fb52afd0ceb81d5f0a7d887fa793d681999b942cc6979763116/pyFFTW-0.14.0-cp39-cp39-manylinux_2_28_aarch64.whl", hash = "sha256:76a82f3502a3c3d0f9d3919f488afe5e948eb0e614b097dc9f3a347e3eeaf967", size = 2439203, upload-time = "2024-07-22T10:45:03.735Z" },
+    { url = "https://files.pythonhosted.org/packages/88/ba/c1cdb1231dbacc8e2548422d60a3d96f0ab983acd4d8c5968e741bd21a5c/pyFFTW-0.14.0-cp39-cp39-manylinux_2_28_x86_64.whl", hash = "sha256:0889c3fa9acbf5f9b9b5dac7d8352ee11f9aaba91e3bfa3cd5d4c236e49ca940", size = 3043911, upload-time = "2024-07-22T10:45:05.448Z" },
+    { url = "https://files.pythonhosted.org/packages/7a/34/0f397aba6e819abe28405193855c0a2f99029beb3fe2ff10253ed5ab0251/pyFFTW-0.14.0-cp39-cp39-win32.whl", hash = "sha256:6d4f70fbf5ed298cf946614770206ff16abefc34df1e92ba21bed5d3df5b1c80", size = 2230869, upload-time = "2024-07-22T10:45:07.511Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/06/5769b7ba7d0334120507a80230aaf1eb66978a73ae4179ae7c0830b2abb3/pyFFTW-0.14.0-cp39-cp39-win_amd64.whl", hash = "sha256:14c3547eeb22a897aedc0e4c4654dde52d8564ecee9f8b5664900974e4e8c006", size = 2639519, upload-time = "2024-07-22T10:45:09.558Z" },
+    { url = "https://files.pythonhosted.org/packages/6c/f8/21f503a8324cd4c4863e3582b918250e5aec3eeedf718c422cf895543758/pyFFTW-0.14.0-pp39-pypy39_pp73-macosx_12_0_x86_64.whl", hash = "sha256:5631d8a5b74437d3dd8b39eb019b4bf269193726f9a5da33e64bb1d2856040d5", size = 2805817, upload-time = "2024-07-22T10:45:11.672Z" },
+    { url = "https://files.pythonhosted.org/packages/6b/32/78478140c17342360831a7e85af50bd41e2e770f3aed03b2a43a40693542/pyFFTW-0.14.0-pp39-pypy39_pp73-macosx_14_0_arm64.whl", hash = "sha256:348eef83dadc46bf3132a6fd39b3bf3794b417fb7e4938027d988e94f85ef026", size = 1250852, upload-time = "2024-07-22T10:45:13.815Z" },
+    { url = "https://files.pythonhosted.org/packages/48/cc/680407989f4c9925d55d325aefcb7f4601bfe1e59f982ba7a45110e143ea/pyFFTW-0.14.0-pp39-pypy39_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:7a317ce8059d35fb5076dc7575d67eca664f9fcd834320ea05982c463bd4e9fc", size = 2567361, upload-time = "2024-07-22T10:45:15.522Z" },
+    { url = "https://files.pythonhosted.org/packages/4f/6e/879fab3f42b72291984aa24675ed55d39bedba18c8c297ad1735d5abe429/pyFFTW-0.14.0-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:4ab9f5cd4103683d9631f149c7df0c9be5841b1bd157cb1c94618269283a8f46", size = 2625218, upload-time = "2024-07-22T10:45:17.562Z" },
+]
+
+[[package]]
+name = "pyfftw"
+version = "0.15.0"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version == '3.10.*'",
+]
+dependencies = [
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "setuptools", marker = "python_full_version == '3.10.*'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4b/3f/ee1bc44b080fc1e81d293cd07bed563d254bc1997d63a3b8053804a87dfd/pyfftw-0.15.0.tar.gz", hash = "sha256:2f16b9854a40c8fdd10aa5803b24ddc6ab49f9cd559dbd7f07e7d61aa205c1ca", size = 164003, upload-time = "2024-11-06T16:01:19.293Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/66/99e0497a2dc8ff67aca6c23734895662b1885fce150a836de60ba9644ec6/pyFFTW-0.15.0-cp310-cp310-macosx_12_0_x86_64.whl", hash = "sha256:2c35205209dde186669b90eeda92ca6837dfff4814edc5aebb01536b32760eb0", size = 2835727, upload-time = "2024-11-06T16:00:34.678Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/2a/9eb5c7aa582bdb0ba25d0ef522281ffa5ff0e34a1cc9d0fb564ee019239a/pyFFTW-0.15.0-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:28bb5888342114950b2d7df268264863c5644f34130a7fdc0acabd05c885d486", size = 1272455, upload-time = "2024-11-06T16:00:36.636Z" },
+    { url = "https://files.pythonhosted.org/packages/af/13/e1c59f3a659ce6712d999b5315c22e547a75f1cc5f171f3cdb9ceae13474/pyFFTW-0.15.0-cp310-cp310-manylinux_2_28_aarch64.whl", hash = "sha256:5748f2d85d790684efd895ce8f3611cceedb75fde944c4788753e0ba1a88637a", size = 2449453, upload-time = "2024-11-06T16:00:38.491Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/b6/55a5033fd41d7b69d3ff9991d7f170f1f90a4463953a0c85011c7c87d739/pyFFTW-0.15.0-cp310-cp310-manylinux_2_28_x86_64.whl", hash = "sha256:f8fe9c361bb69f58c9488d4d267047f94cfcea89ba7cd1ce6a148f807be88c6c", size = 3054268, upload-time = "2024-11-06T16:00:39.891Z" },
+    { url = "https://files.pythonhosted.org/packages/5a/f9/32cc147de14e30fd674a53097fc11e12a161bf88d120fbc4b5a3013e3ef1/pyFFTW-0.15.0-cp310-cp310-win32.whl", hash = "sha256:79a90799d4a4fc8d2c06b545e29a5e0575df81d0b9d131b20476a287f18817ee", size = 2234523, upload-time = "2024-11-06T16:00:41.222Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/dc/c469ccb4a06fa530cb34d7c61885cede184c3c0f39c873fb14bbc6c0450c/pyFFTW-0.15.0-cp310-cp310-win_amd64.whl", hash = "sha256:80ed625c8e8b6c1ba3ba6741ca0c7584c62ac0d99d9d33d7b4617c5087977aa0", size = 2642503, upload-time = "2024-11-06T16:00:42.924Z" },
+    { url = "https://files.pythonhosted.org/packages/17/6e/325833415acbb267b1533ea8c5dcd243df8b5bb3ecbc6e42778514859dfe/pyFFTW-0.15.0-cp311-cp311-macosx_12_0_x86_64.whl", hash = "sha256:facabac06cb2300fdfcb1cfab9af70b24380d24a725a9b4dbf8cdadf04c1a6c0", size = 2836851, upload-time = "2024-11-06T16:00:45.177Z" },
+    { url = "https://files.pythonhosted.org/packages/11/cf/3e6e1fbb4dda9718682b38109018240a631f9078f659eea4add2189a6e6f/pyFFTW-0.15.0-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:730e86d23ea52a511fd3b0a0b8206dbe9f9f017522dabb838a7ca876e442ea8a", size = 1273108, upload-time = "2024-11-06T16:00:46.607Z" },
+    { url = "https://files.pythonhosted.org/packages/41/b8/69fa1a05a9c1830fefa3805c0b67f43a5a6fa3d83950f2ab088b80826378/pyFFTW-0.15.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:b8ab3ad5b6fadf64e34be2fdc34c9cc2b767b33c7a1b0f3e778f4b3fac0b2566", size = 2506868, upload-time = "2024-11-06T16:00:48.197Z" },
+    { url = "https://files.pythonhosted.org/packages/29/ca/f9035218cbf7986f214bbe57bfb1f2951d344a0baf601d8ee065d0422e07/pyFFTW-0.15.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:076c42a2b8841fc06fc592d812bfa41a85355dc7f79b6f51016ce981a35efc97", size = 3111543, upload-time = "2024-11-06T16:00:50.044Z" },
+    { url = "https://files.pythonhosted.org/packages/1e/68/8c56e66ab9903440a41c3859409c2ec06b218c187c859c432d954002e778/pyFFTW-0.15.0-cp311-cp311-win32.whl", hash = "sha256:5c50580ac16173fb547d18ad089148f030ef48a0f1f3b2faf3bb522b7f9fd8b6", size = 2234192, upload-time = "2024-11-06T16:00:52.23Z" },
+    { url = "https://files.pythonhosted.org/packages/91/cf/1b8ba1f0c8fb91f2caaf0ff30011a8289d7732b21cfc812b826222cafbaa/pyFFTW-0.15.0-cp311-cp311-win_amd64.whl", hash = "sha256:553d62715e8e9ad20c6a6aa556846d785488f16fa2a518abcac58ae3c7087654", size = 2643265, upload-time = "2024-11-06T16:00:53.542Z" },
+    { url = "https://files.pythonhosted.org/packages/08/5d/5d30a3a39bbe1e1d083d8efe23a62f1deacc445a82e3a55289b820f0ad9d/pyFFTW-0.15.0-cp312-cp312-macosx_12_0_x86_64.whl", hash = "sha256:27410a9ac0e4ad7821a564549be031d5422d9a96bb35ea63d2d324774f709b65", size = 2833540, upload-time = "2024-11-06T16:00:54.985Z" },
+    { url = "https://files.pythonhosted.org/packages/4b/dc/ff9969669fcbff0972c1a96a116fa7efad763d136fc9a58f6112bf770688/pyFFTW-0.15.0-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:cd8bfb4a9e844693f8dd92ba97bc91d27404716b70580f846e80d74f6b092ffe", size = 1270715, upload-time = "2024-11-06T16:00:56.743Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/1c/30bc73495966285fdd3e79a4a7482dbdd863e505bf3021a455bf7b923423/pyFFTW-0.15.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:7d08f75ed35c0af097333b2de368a0b30460a3e7e7bed47780aac3c27f9ec77b", size = 2499664, upload-time = "2024-11-06T16:00:58.166Z" },
+    { url = "https://files.pythonhosted.org/packages/6d/81/e5f5769f08aa3efa9527b328a9ebac7a2817f81a2b0f2266e79276686f31/pyFFTW-0.15.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:7ccae636ad163133bc5335d05f56afdb0c756ee013692c667b822a11e188a446", size = 3100310, upload-time = "2024-11-06T16:00:59.548Z" },
+    { url = "https://files.pythonhosted.org/packages/60/5b/18c12dfb07b82a93b9b459380e2f118afd139cc564e1575624794b15e68d/pyFFTW-0.15.0-cp312-cp312-win32.whl", hash = "sha256:b4963a55b442c859ede2d247d84daa71c6c01b64e0d9b2730f5635b962777fb2", size = 2229927, upload-time = "2024-11-06T16:01:01.315Z" },
+    { url = "https://files.pythonhosted.org/packages/dd/d2/cb3fc49bffb2f7cb49da6dbc67888c9c55df1aca6d11c6d1d000e37fc64f/pyFFTW-0.15.0-cp312-cp312-win_amd64.whl", hash = "sha256:6ace61f34f0dd7973207c31ce16fd7bedf9a178bb956f157559f13384f219713", size = 2641096, upload-time = "2024-11-06T16:01:02.928Z" },
+    { url = "https://files.pythonhosted.org/packages/a1/0d/90821a720638cbef79319463e3ce5d98f24153cee53316d4ecc1d8c0400d/pyFFTW-0.15.0-cp313-cp313-macosx_12_0_x86_64.whl", hash = "sha256:cfbeb106877db1b6bf527735647b861c86ac846ff47671d0d855a9be2de83368", size = 2832851, upload-time = "2024-11-06T16:01:04.301Z" },
+    { url = "https://files.pythonhosted.org/packages/12/b7/e625f0cdb2bd65aa43ee35ce8cac1b0abc6c12871cd87fa83e404d82fd1d/pyFFTW-0.15.0-cp313-cp313-macosx_14_0_arm64.whl", hash = "sha256:6d8913036a48ebcc9e3e1a315a6607e5cc31af4aee395aae180ff644c4658bbb", size = 1269651, upload-time = "2024-11-06T16:01:06.419Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/66/d12a9629908008ed97446c44ca2177c8f59e570a445da4136fdbb9e8db1c/pyFFTW-0.15.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:05324c8c092aa43868554daf6ddd7fd23eee18cd284ab68e749c62427c662737", size = 2496935, upload-time = "2024-11-06T16:01:07.82Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/c4/adcf010b151564401e3d401602b0e0cacae1e7cb816f0207397c3ddec626/pyFFTW-0.15.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:474f4a0ccfddfdfbe3e4a610b1c8f5968b58edf44434bf9d08ea52108a72df54", size = 3096170, upload-time = "2024-11-06T16:01:09.258Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/96/b1eaad07d5eaf026e2ed0c6f2afdf825628706162071d2665b3824727346/pyFFTW-0.15.0-cp313-cp313-win32.whl", hash = "sha256:40f8f3341546264178a8d9e8736e91554884595a683b71f8db8399907330f47d", size = 2229713, upload-time = "2024-11-06T16:01:10.902Z" },
+    { url = "https://files.pythonhosted.org/packages/e9/23/d06a3e5b549f7537ada2b1fc2e5f7c05c38df70c843d463bc469812b1ebd/pyFFTW-0.15.0-cp313-cp313-win_amd64.whl", hash = "sha256:bf04458c5d2fbfe5da270a4b667c59c5792cbe39300379d886acd8ea97fc55cc", size = 2640821, upload-time = "2024-11-06T16:01:12.234Z" },
+    { url = "https://files.pythonhosted.org/packages/f2/5b/060fb5f48773dc1be3abd4d495a7b0fd02aeb6be57cb6bac214d1fd75447/pyFFTW-0.15.0-pp310-pypy310_pp73-macosx_12_0_x86_64.whl", hash = "sha256:e94576643406ffd4dc29851e4d493c8bfb3bde8390661b7fced050c1e6ff99ac", size = 2810336, upload-time = "2024-11-06T16:01:14.05Z" },
+    { url = "https://files.pythonhosted.org/packages/46/5f/ee1692303b7cc15cdaf56861de6da8e12d001f4c45883832ffd26827b777/pyFFTW-0.15.0-pp310-pypy310_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:ca1dbb5e86121f24b637413584224dda129774d661be1640f092156f4088b3bf", size = 2570190, upload-time = "2024-11-06T16:01:15.496Z" },
+    { url = "https://files.pythonhosted.org/packages/e1/19/b66be24aec24a1e59c8c7a04d58b446af15b809a53d70626acba7e865853/pyFFTW-0.15.0-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:9ff6b656058f4099db30a5b5d01c7c1c6503c02a68f07398008a094c374d53c5", size = 2627837, upload-time = "2024-11-06T16:01:16.917Z" },
+]
+
+[[package]]
+name = "pyfftw"
+version = "0.15.1"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.11'",
+]
+dependencies = [
+    { name = "numpy", version = "2.3.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f2/2d/e38439b7f937e8bf91a9ff2b8d9713d0d8e64e980fc00e8d1945b8a5b74b/pyfftw-0.15.1.tar.gz", hash = "sha256:bbcde6d40d165e1cbaf12dde062ebfebe9e43394cac8c166e699ba2c9a4b0461", size = 192838, upload-time = "2025-10-22T19:58:56.683Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/20/c0/4f1a586eed5eba86c27d6fab4ebed44bbfeedd5209e835c19c6406f96a41/pyfftw-0.15.1-cp311-cp311-macosx_13_0_x86_64.whl", hash = "sha256:fb5283238be3c797b7b91cbb1d549787b9d0495a7d48b828832a3c94fa557f48", size = 3297881, upload-time = "2025-10-22T19:58:20.945Z" },
+    { url = "https://files.pythonhosted.org/packages/b2/c1/02eaaf7a2f7ca26d7b56b6195617979b44b9213f3dcc1a514663a3bbc264/pyfftw-0.15.1-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:f4b42864e95f128a676e27a94025cce074d807a81d48ed423c65aa7403a7729a", size = 1682075, upload-time = "2025-10-22T19:58:22.236Z" },
+    { url = "https://files.pythonhosted.org/packages/c6/23/e3692116f6e903d1d9705d1f948f94ee133512a0b388d05ea0f8adcb0c07/pyfftw-0.15.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:2e728dbe262182089a6606b7feb5c67bc55b8b385b0c1b60f71d6a891b5f142a", size = 2557646, upload-time = "2025-10-22T19:58:23.345Z" },
+    { url = "https://files.pythonhosted.org/packages/7a/49/affa553caa93928d2f7d814f26939487d37d4068a0ba4d8238c6ba3000b1/pyfftw-0.15.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:294eecf05577b0198e6d041376e016254c4b54040b8a7a330d9d6321b8b30472", size = 3158494, upload-time = "2025-10-22T19:58:24.63Z" },
+    { url = "https://files.pythonhosted.org/packages/88/92/bde713b499fa2062f30f396603bbf09acd0c9c974249638202c931433498/pyfftw-0.15.1-cp311-cp311-win32.whl", hash = "sha256:ed42033aa729520c66500027157525981613a139c2fd4671dd7d52d58cb4b820", size = 2226331, upload-time = "2025-10-22T19:58:26.345Z" },
+    { url = "https://files.pythonhosted.org/packages/25/f4/e0583a68e1114b108354207ce0680b898a4b37c48bd3a8cfc1fd0ec1a476/pyfftw-0.15.1-cp311-cp311-win_amd64.whl", hash = "sha256:e32a30c34f27c24ee602b89b22d9cd453570bf851e7d8f98506185cb5e99ccfc", size = 2634855, upload-time = "2025-10-22T19:58:27.839Z" },
+    { url = "https://files.pythonhosted.org/packages/4f/76/5673561606f45c60ab3da497deead308e2c4b59c2b705334a01b880f0421/pyfftw-0.15.1-cp312-cp312-macosx_13_0_x86_64.whl", hash = "sha256:074926b5fa6a2193771cb4dc5beaa52ea1d629dc40da363d7de7918df5f3e951", size = 3315083, upload-time = "2025-10-22T19:58:28.981Z" },
+    { url = "https://files.pythonhosted.org/packages/2d/fb/5042ad5c4ddc2db89844fc853b6358d36497e44f9d32f3aef9c3fa393182/pyfftw-0.15.1-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:2156d7bc72a2e2a1c747767909b1a7ba2bcfde14a51fca3171d7c1f8de6c2f02", size = 1698218, upload-time = "2025-10-22T19:58:30.536Z" },
+    { url = "https://files.pythonhosted.org/packages/df/1c/7b76808da67a3775480f64e93acc0a623aad7682ba83428311de05ebc67a/pyfftw-0.15.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:313340683d5e99b0a36e45b8c2bd92cd86dfbb18917a62e89890927a66bed9e9", size = 2562434, upload-time = "2025-10-22T19:58:31.531Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/43/43fbc63ec6790ce6346e6441e82b54356334641d9d6f099f1ed75d302f2a/pyfftw-0.15.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:900d79c7fa1b27b58ec4240f7cb6d512492a9db9bc8cbd18076ed28c84a63b62", size = 3167162, upload-time = "2025-10-22T19:58:32.636Z" },
+    { url = "https://files.pythonhosted.org/packages/e4/e1/82d4967ef4ccd8c17e58a9a34fa283436de98c32c08aac4191ef56bf9989/pyfftw-0.15.1-cp312-cp312-win32.whl", hash = "sha256:9c94a6d251f2ceb9d6bb86964c43f9eb9cbd8612a60f41b10c8a64e816f6a2ed", size = 2222298, upload-time = "2025-10-22T19:58:33.795Z" },
+    { url = "https://files.pythonhosted.org/packages/ab/c0/3f4513921fd3cb40986bc6fe4a33e87c5aef671edff483db6f7c4a5f8309/pyfftw-0.15.1-cp312-cp312-win_amd64.whl", hash = "sha256:74fe153d6bec682cd85b5601df09cb84ce6e3cc901172a3ce86da7544e457e4c", size = 2633571, upload-time = "2025-10-22T19:58:35.185Z" },
+    { url = "https://files.pythonhosted.org/packages/c2/f5/5dca09b863e71db438069eb1990526a4409deebc190228177dec3b7cc636/pyfftw-0.15.1-cp313-cp313-macosx_13_0_x86_64.whl", hash = "sha256:a16c4eb45ff5277f8bcb979d43a6a0d7f2e7405dcad984dc45a30064ed487da9", size = 3315212, upload-time = "2025-10-22T19:58:36.273Z" },
+    { url = "https://files.pythonhosted.org/packages/56/c1/1ff9aa930f98c77bbff9cae122e496f1fd7201abac309f1dbcc9fbe5c7ee/pyfftw-0.15.1-cp313-cp313-macosx_14_0_arm64.whl", hash = "sha256:2b4bad0184546e3129eeda9d07541eca71232f6e431d57c734930d25f06386e8", size = 1698270, upload-time = "2025-10-22T19:58:37.684Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/3f/e94d5773429dc076ec4b47d029603de1728a5037024ed3dbcc853cfa72e9/pyfftw-0.15.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:1716378d1d102527917b872a5baf15e2e3de52d5200ccc22128816cd71c33148", size = 2559574, upload-time = "2025-10-22T19:58:38.662Z" },
+    { url = "https://files.pythonhosted.org/packages/cb/64/5f773d61cca91a1a741e2403d7191610513d0cca3fc73a41a6941a31fe89/pyfftw-0.15.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:16209de9a244ab7b3337e8ce8d528420ffd05881e7d19e5be21d2546a7e5b2c1", size = 3166906, upload-time = "2025-10-22T19:58:39.986Z" },
+    { url = "https://files.pythonhosted.org/packages/c4/8a/dda252557803fde20be41396425a85faf6680eaeed3996e4b765745e9206/pyfftw-0.15.1-cp313-cp313-win32.whl", hash = "sha256:db2a65c59d7a707c55a8f0f38be3916b907429ceed316c6875201b202e22ac99", size = 2222209, upload-time = "2025-10-22T19:58:41.237Z" },
+    { url = "https://files.pythonhosted.org/packages/20/6b/9236a2fb77b01b00b957304d53694de2bf034caac89c1d35ab7fa3421fd9/pyfftw-0.15.1-cp313-cp313-win_amd64.whl", hash = "sha256:dcac51a5a4b8c6600bb2c7edb86d9739860a61bb0b076e20fbf0340919da307d", size = 2633673, upload-time = "2025-10-22T19:58:42.709Z" },
+    { url = "https://files.pythonhosted.org/packages/3f/5c/ec4cef958e936ac61528644825d052c1c486192aeffadf071071a17cd86a/pyfftw-0.15.1-cp314-cp314-macosx_13_0_x86_64.whl", hash = "sha256:c4e49219794bfe99c7db94d0b392c86ff979db4da2d27d444edbc6de1519ddae", size = 3313756, upload-time = "2025-10-22T19:58:44.002Z" },
+    { url = "https://files.pythonhosted.org/packages/d3/68/39e06bab39edf6473653670c6c25fe971a7b369a2059ddc971ac5f872653/pyfftw-0.15.1-cp314-cp314-macosx_14_0_arm64.whl", hash = "sha256:489a6364a613935736d43da67791ab4dfcf4875e968a8b46e99983afde7ec960", size = 1697163, upload-time = "2025-10-22T19:58:45.592Z" },
+    { url = "https://files.pythonhosted.org/packages/dc/4d/9ae0dfaf5174a13714cfc5377165de5703230c1df96715cfee9d19fb0b4c/pyfftw-0.15.1-cp314-cp314-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:379844360c03402f4d2a738fa19924153d5467cdc88aa3752b12bbc1403512b0", size = 2561755, upload-time = "2025-10-22T19:58:46.773Z" },
+    { url = "https://files.pythonhosted.org/packages/d5/3b/bc991e3abf4f6ad9907658e3b282530d345027fa294b510a9eb1fce882c4/pyfftw-0.15.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:398a342a689061bfc4bfe7271a973e093f78176a632fb4e523b3ed5b72dba4c6", size = 3156174, upload-time = "2025-10-22T19:58:47.999Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/5d/c0a9782c333e8b5de334285e3adc0542f2265107d0c9b720f5730bc43471/pyfftw-0.15.1-cp314-cp314-win32.whl", hash = "sha256:375ec8b11140eb30262bf9ecfa34d043a42d036c33c66e24bfe734f5aae7ddf0", size = 2245736, upload-time = "2025-10-22T19:58:49.422Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/c7/ba88f0b5d81ae0732a2cb2900c52924ddfa6b1623e511533c022a558e058/pyfftw-0.15.1-cp314-cp314-win_amd64.whl", hash = "sha256:558c318a1aea81ce2083309c927fd881ccf9c285c5571ce965bb7b18dc4291fd", size = 2660474, upload-time = "2025-10-22T19:58:50.93Z" },
+    { url = "https://files.pythonhosted.org/packages/88/45/a34cd015d16002e748de0e218d24ecc2f30eb9ad073f1c7941a51a796a2e/pyfftw-0.15.1-pp311-pypy311_pp73-macosx_13_0_x86_64.whl", hash = "sha256:41a25b721e79378a3ea29d21d2e6cf25e43c1f44bc0bbf554beccdcdb2b8064e", size = 3278795, upload-time = "2025-10-22T19:58:52.212Z" },
+    { url = "https://files.pythonhosted.org/packages/15/27/0e6195c9c5eeef73a7499772621057aff5ffd04ebb52a71d49cc049a3dad/pyfftw-0.15.1-pp311-pypy311_pp73-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5e957f5caa7ccc032d17831ce336cb61b93f516ed7da25ea6c9e1086ed2e323f", size = 2570541, upload-time = "2025-10-22T19:58:53.357Z" },
+    { url = "https://files.pythonhosted.org/packages/2e/a9/f1d00acce882645198576a94c4b7fff5465f0bb6c4b7bb1005314527c2d0/pyfftw-0.15.1-pp311-pypy311_pp73-win_amd64.whl", hash = "sha256:763cd58e858133493db371ed3a63e9e41463cd40965e2375a079947c2d96805f", size = 2625398, upload-time = "2025-10-22T19:58:54.893Z" },
+]
+
+[[package]]
 name = "pyparsing"
 version = "3.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1748,6 +1918,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/fd/c2/e276a237acb09824822b0ada11b028ed4067fdc367a946730979feacb870/scipy-1.16.2-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:b0348d8ddb55be2a844c518cd8cc8deeeb8aeba707cf834db5758fc89b476a2c", size = 38790088, upload-time = "2025-09-11T17:44:53.011Z" },
     { url = "https://files.pythonhosted.org/packages/c6/b4/5c18a766e8353015439f3780f5fc473f36f9762edc1a2e45da3ff5a31b21/scipy-1.16.2-cp314-cp314t-win_amd64.whl", hash = "sha256:26284797e38b8a75e14ea6631d29bda11e76ceaa6ddb6fdebbfe4c4d90faf2f9", size = 39457455, upload-time = "2025-09-11T17:44:58.899Z" },
     { url = "https://files.pythonhosted.org/packages/97/30/2f9a5243008f76dfc5dee9a53dfb939d9b31e16ce4bd4f2e628bfc5d89d2/scipy-1.16.2-cp314-cp314t-win_arm64.whl", hash = "sha256:d2a4472c231328d4de38d5f1f68fdd6d28a615138f842580a8a321b5845cf779", size = 26448374, upload-time = "2025-09-11T17:45:03.45Z" },
+]
+
+[[package]]
+name = "setuptools"
+version = "80.10.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/76/95/faf61eb8363f26aa7e1d762267a8d602a1b26d4f3a1e758e92cb3cb8b054/setuptools-80.10.2.tar.gz", hash = "sha256:8b0e9d10c784bf7d262c4e5ec5d4ec94127ce206e8738f29a437945fbc219b70", size = 1200343, upload-time = "2026-01-25T22:38:17.252Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/b8/f1f62a5e3c0ad2ff1d189590bfa4c46b4f3b6e49cef6f26c6ee4e575394d/setuptools-80.10.2-py3-none-any.whl", hash = "sha256:95b30ddfb717250edb492926c92b5221f7ef3fbcc2b07579bcd4a27da21d0173", size = 1064234, upload-time = "2026-01-25T22:38:15.216Z" },
 ]
 
 [[package]]
