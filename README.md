@@ -70,4 +70,4 @@ Laboratory exercises include practical applications and analysis of:
 
 - MATLAB / GNU Octave  
 - Python (NumPy, SciPy, Matplotlib)  
-- Git and GitHub for version control and collabo
+- Git and GitHub for version control and collaboration
